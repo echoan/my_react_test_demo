@@ -4,10 +4,13 @@
         "react"
     ],
     "plugins": ["transform-runtime", ["import", {
-        "libraryName": "antd",
-        "style": "css"
-    }], ["import", {
-    "libraryName": "antd-mobile",
-    "style": "css"
-    }]]
+            "libraryName": "antd-mobile",
+            "style": "css"
+        }],
+        ["import", {
+            "libraryName": "antd",
+            "style": "css"
+        }]
+    ]
+    /*当在.babellrc的plugins中引用多个库时，不知道什么原因，只有第一个会生效，有可能是babel-plugin-import的本身的问题*/
 }
